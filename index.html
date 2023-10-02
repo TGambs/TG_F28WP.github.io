@@ -3,21 +3,38 @@
 <html>
 
     <head>
-        <!--This is the header-->
+        <!--  -->
         <title>Main Page</title>
-        <link rel="icon" type="image/x-icon" href="web_icon.png">
+        <link rel="icon" type="image/x-icon" href="web_icon.png"> <!-- Adds the icon to the browser -->
         <link rel="stylesheet" href="main_css.css">
+        <script type=text/javascript src="java.js"></script>
     </head>
 
     <body>
 
         <ul class="navBar">
-            <li class="navBar" href="index.html">1st Page</li>
-            <li class="navBar" href="2ndPage.html">2nd Page</li>
-            <li class="navBar" href="3rdPage.html">3rd Page</li>
-            <li class="navBar" href="4thPage.html">4th Page</li>
+            <li class="navBar" ><button class="navBar" href="index.html">1st Page</button></li>
+            <li class="navBar" href="2ndPage.html"><button class="navBar">2nd Page</button></li>
+            <li class="navBar" href="3rdPage.html"><button class="navBar">3rd Page</button></li>
+            <li class="navBar" href="4thPage.html"><button class="navBar">4th Page</button></li>
         </ul>
 
+        <h1>This is a h1 title</h1>
+        <p>This is p text</p>
+
+        <div class="main">
+            <button id="colourButton" onclick="changeColour()">This button changes colour</button>
+        </div>
+
     </body>
+
+    <!--
+    <script type=text/javascript src="java.js"></script>
+        function changeColour(){
+            document.getElementById("colourButton").style.backgroundColor = "red";
+        }
+        -->
+        
+
 
 </html>
