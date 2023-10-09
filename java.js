@@ -25,21 +25,45 @@ function cookieData(){
 }
 
 
-document.body.style.height = '200pt';
+// Following is for the cookie banner
 
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.2.2/cookiebanner.min.js';
-script.id = 'cookiebanner';
-script['data-height']   = '20px'; // non-standard attribute (may need to use 'setAttribute(..)'
-script['data-position'] = 'top';
-script['data-message']  = 'We use cookies!';
-document.head.appendChild(script); 
+let popup = document.getElementById("cookiePopUp");
 
-script.onload = function()
-{
-  console.log('loaded script');
+//Listens for when the user clicks the the accept button
+document.getElementById("acceptCookie").addEventListener("click",() => {
 
-  // console.log( initCookieConsent );
-}
-console.log('ready');
+    let d = new Date();
+    d.setMinutes(2 + d.getMinutes()); // Cookie will now expire after 2 minutes
+
+    //Creates cookie with a name, value and expiry time
+    document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
+
+    //Hide the popup
+    popup.classList.add("hide");
+    popup.classList.remove("show");
+} ) ;
+
+//Check if cookie is already present
+const checkCookie = () => {
+
+    // Finds the cookie and splits it at "="
+    let input = document.cookie.split("=");
+
+    //Check for the cookie
+    if (input[0] == "myCookieName"){
+        //Hide popup
+        popup.classList.add("hide");
+        popup.classList.remove("show");
+    }else {
+        //Show popup
+        //popup.classList.remove("hide");
+        popup.classList.add("show");
+    }
+};
+
+//Check if cookie exists when page loads
+window.onload = () => {
+    setTimeout(() => {
+        checkCookie();
+    }, 2000);
+};

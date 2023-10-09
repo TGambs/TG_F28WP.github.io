@@ -9,6 +9,9 @@ h2{
 
 
 /* Attributes */
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-color: rgb(51, 51, 51);
@@ -67,4 +70,55 @@ button:hover, #colourButton:hover {
 
 #extraCookie{
     background-color: blanchedalmond;
+}
+
+#cookiePopUp{
+    background-color: white;
+    position: absolute;
+    font-size: 15px;
+    width: 70vw;
+    max-width: 42.85em;
+    box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+    text-align: justify;
+    line-height: 1.8em;
+    padding: 2em 1.4em;
+    border-radius: 6px;
+    transition: all 0.5s ease-in;
+}
+#cookiePopUp p {
+    text-align: center;
+    margin: 3.75em;
+}
+#cookiePopUp button {
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 1em 1.4em;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+}
+.hide {
+    visibility: hidden;
+    bottom: 0;
+    right: 2em;
+}
+.show {
+    visibility: visible;
+    bottom: 2em;
+    right: 2em;
+}
+@media only screen and (max-width: 37.5em) {
+    #cookiePopUp{
+        width: 100%;
+    }
+    .hide{
+        bottom: 2em;
+        right: 0;
+    }
+    .show{
+        bottom: 0;
+        right: 0;
+    }
 }
