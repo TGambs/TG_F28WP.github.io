@@ -2,35 +2,38 @@
 h1 {
     text-decoration: underline;
 }
+h2{
+    text-decoration: underline;
+    font-size: 18px;
+}
 
 
-/* Lists */
+/* Attributes */
 ul.navBar{
     list-style-type: none;
-    padding: 0px;
-    overflow: hidden;
+    padding: 5px;
+    margin: 5px;
+    background-color: #333;
+    display: inline-block;
 }
 
 li.navBar{
     float: left;
-    padding: 15px 32px;
-    background-color: #333;
+}
+li a:hover{
+    background-color: #111;
 }
 
 button.navBar{
     border: none;
-    display: block;
     text-align: center;
-    padding: 14px 16px;
-    margin: 4px 2px;
+    border: 10px;
+    padding: 14px;
+    /*margin: 4px 2px; not problem*/
     text-decoration: none;
     font-size: 16px;
     color: white;
     background-color: red;
-}
-
-li a:hover{
-    background-color: #111;
 }
 
 
@@ -41,7 +44,21 @@ div.main{
     text-align: center;
 }
 
+div.cookie{
+    background-color:bisque;
+    padding: 20px;
+    font-size: 15px;
+    max-width: 40%;
+    align-self: left;
+}
+
 /* IDs */
 #colourButton{
+    background-color: #3636;
     padding: 5px;
+    border: 1px;
+}
+
+#extraCookie{
+    background-color: blanchedalmond;
 }
