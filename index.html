@@ -16,17 +16,15 @@
         <script type=text/javascript src="java.js"></script>
     </head>
 
-    <body onload="isCookiesOn()">
+    <body>
 
-        <ul class="navBar">
-            <li><button class="navBar" onclick="location.href='index.html'" type="button">1st Page</button></li>
-            <li><button class="navBar" onclick="location.href='2ndPage.html'" type="button">2nd Page</button></li>
-            <li><button class="navBar" onclick="location.href='3rdPage.html'" type="button">3rd Page</button></li>
-            <li><button class="navBar" onclick="location.href='4thPage.html'" type="button">4th Page</button></li>
-        </ul>
+        <div class="navBar">
+            <button class="navBar" onclick="location.href='index.html'" type="button">1st Page</button>
+            <button class="navBar" onclick="location.href='2ndPage.html'" type="button">2nd Page</button>
+            <button class="navBar" onclick="location.href='3rdPage.html'" type="button">3rd Page</button>
+            <button class="navBar" onclick="location.href='4thPage.html'" type="button">4th Page</button>
+        </div>
 
-        <h1>This is a h1 title</h1>
-        <p>This is p text</p>
 
         <div class="main">
             <button id="colourButton" onclick="changeColour()">This button changes colour</button>
@@ -34,9 +32,9 @@
             <br>
             <div class="cookie">
                 <h2>Cookie Data</h2>
-                <p>Username: </p>
-                <p>Current Date: </p>
-                <p>Expiry Date:</p>
+                <button onclick="cookieData()">Press for cookie data</button>
+                <p id="usersName">Username: </p>
+                <p id="dateNow">Current Date: </p>
                 <p id="extraCookie">Other: </p>
             </div>
         </div>
