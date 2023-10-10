@@ -30,13 +30,17 @@
             <button id="colourButton" onclick="changeColour()">This button changes colour</button>
             <br>
             <br>
-            <div class="cookie">
-                <h2>Cookie Data</h2>
-                <button onclick="cookieData()">Press for cookie data</button>
+            <div class="userInfo">
+                <h2>User Data</h2>
+                <button onclick="UserData()">Press for cookie data</button>
                 <p id="usersName">Username: </p>
                 <p id="dateNow">Current Date: </p>
-                <p id="extraCookie">Other: </p>
+                <p id="cookiesEnabled">Cookies: </p>
+                <p id="uBrowser">Browser: </p>
+                <p id="link">test</p>
+                <p id="uPos"><a href="https://www.google.com/maps/@55.902208,-3.3292288,14z">Location:</a> </p>
             </div>
+
         </div>
 
         <div id="cookiePopUp" class="hide">
@@ -44,8 +48,10 @@
                 relevant information. By continuing to use the website you agree 
                 & accept our <a href="#">Privacy & Cookie Policy</a>
             </p>
-            <button id="acceptCookie">Accept</button>
+            <button id="acceptCookie" onclick="cookieClicked()">Accept</button>
         </div>
+
+
 
 
     </body>
