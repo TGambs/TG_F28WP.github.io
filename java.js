@@ -65,15 +65,12 @@ function UserData(){
 
 // Following is for the cookie banner
 
-let popup = document.getElementById("cookiePopUp");
-
-//Listens for when the user clicks the the accept button
-let cookieButton = document.getElementById("acceptCookie");
-//cookieButton.addEventListener(click,cookieClicked());
+//let popup = document.getElementById("cookiePopUp");
 
 function cookieClicked(){
+    let popup = document.getElementById("cookiePopUp");
     let d = new Date();
-    d.setMinutes(2 + d.getMinutes()); // Cookie will now expire after 2 minutes
+    d.setMinutes(5 + d.getMinutes()); // Cookie will now expire after 5 minutes
 
     //Creates cookie with a name, value and expiry time
     document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
@@ -85,6 +82,7 @@ function cookieClicked(){
 
 //Check if cookie is already present
 const checkCookie = () => {
+    let popup = document.getElementById("cookiePopUp");
 
     // Finds the cookie and splits it at "="
     let input = document.cookie.split("=");
@@ -97,15 +95,17 @@ const checkCookie = () => {
     }else {
         //Show popup
         //popup.classList.remove("hide");
+        console.log(popup.classList);
         popup.classList.add("show");
     }
 };
 
-/*
+
 //Check if cookie exists when page loads
 window.onload = () => {
     setTimeout(() => {
         checkCookie();
     }, 2000);
 };
-*/
+
+

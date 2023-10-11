@@ -25,21 +25,22 @@ button.navBar{
     padding: 14px;
     margin: 10px 20px 10px 10px;
     font-size: 16px;
-    color: white;
-    background-color: red;
+    color: black;
+    background-color: rgb(153, 204, 255);
+    border-radius: 50px;
 }
 
 
 /* Divs */
 div.navBar{
-    background-color: rgb(228, 249, 191);
+    background-color: rgb(25, 25, 77);
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
 }
 
 div.main{
-    background-color: beige;
+    background-color: rgb(25, 25, 77);
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -47,7 +48,7 @@ div.main{
 }
 
 div.userInfo{
-    background-color:bisque;
+    background-color:rgb(153, 204, 255);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
@@ -78,21 +79,22 @@ button:hover, #colourButton:hover {
     position: absolute;
     font-size: 15px;
     width: 70vw;
-    max-width: 42.85em;
+    max-width: 35em;
     box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
     text-align: justify;
     line-height: 1.8em;
-    padding: 2em 1.4em;
+    padding: 1em 1.4em;
     border-radius: 6px;
-    transition: all 0.5s ease-in;
+    /*transition: all 0.5 linear;*/
 }
 #cookiePopUp p {
     text-align: center;
-    margin: 3.75em;
+    margin: 1.75em;
 }
 #cookiePopUp button {
     border: none;
     color: white;
+    background-color: rgb(51, 51, 51);
     font-size: 1.2em;
     padding: 1em 1.4em;
     display: block;
@@ -102,7 +104,7 @@ button:hover, #colourButton:hover {
 }
 .hide {
     visibility: hidden;
-    bottom: 0;
+    bottom: 2em; /*Changes the position onces it is not visible*/
     right: 2em;
 }
 .show {
@@ -110,19 +112,7 @@ button:hover, #colourButton:hover {
     bottom: 2em;
     right: 2em;
 }
-@media only screen and (max-width: 37.5em) {
-    #cookiePopUp{
-        width: 100%;
-    }
-    .hide{
-        bottom: 2em;
-        right: 0;
-    }
-    .show{
-        bottom: 0;
-        right: 0;
-    }
-}
+
 #uPos {
     text-decoration: underline;
     color: blue;
