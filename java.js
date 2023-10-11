@@ -40,16 +40,18 @@ function UserData(){
 
     function showPosition(position) {
 
-        //<a href="https://www.google.com/maps/@55.902208,-3.3292288,14z">"Map"</a>
-
+        // Minipulates the link to add the user's live position
         let mapLink ="https://www.google.com/maps/@"+position.coords.latitude+","+position.coords.longitude;
+        // Opens new tab for google maps when the text is clicked
+        document.getElementById("uPos").onclick = function() {
+            window.open(mapLink);
+        }
         
-        document.getElementById("link").innerHTML = mapLink;
-
-        uPos.innerHTML = "<br>Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        // Displays the user's latitude and longditude
+        uPos.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
     }
-
-
+    
+    // Automatically checks if the user's location is accessable
     if (navigator.geolocation) {
         let pos = navigator.geolocation.getCurrentPosition(showPosition);
         document.getElementById("uPos").innerHTML = "Position: " + pos;
@@ -107,19 +109,3 @@ window.onload = () => {
     }, 2000);
 };
 */
-
-let t1 = "Cookies Enabled: " + navigator.cookieEnabled;
-let t2 = "Browser Language: " + navigator.language;
-let t3 = "Browser Online: " + navigator.onLine;
-let t4 = "User-agent header: " + navigator.userAgent;
-
-console.log(t4);
-t4 = t4.split(")");
-t4[0] += ")";
-
-
-console.log(window.navigator.userAgent);
-console.log(t1);
-console.log(t2);
-console.log(t3);
-console.log(t4[0]);

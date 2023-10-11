@@ -123,3 +123,7 @@ button:hover, #colourButton:hover {
         right: 0;
     }
 }
+#uPos {
+    text-decoration: underline;
+    color: blue;
+}
