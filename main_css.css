@@ -56,6 +56,8 @@ div.userInfo{
     font-size: 15px;
     max-width: 40%;
     align-self: left;
+    max-width: 40%;
+    max-height: 40%;
 }
 
 div.webGrab{
@@ -110,6 +112,11 @@ button:hover, #colourButton:hover {
     margin: auto;
     border-radius: 5px;
 }
+#uPos {
+    text-decoration: underline;
+    color: blue;
+}
+/* Classes */
 .hide {
     visibility: hidden;
     bottom: 2em; /*Changes the position onces it is not visible*/
@@ -119,9 +126,4 @@ button:hover, #colourButton:hover {
     visibility: visible;
     bottom: 2em;
     right: 2em;
-}
-
-#uPos {
-    text-decoration: underline;
-    color: blue;
 }

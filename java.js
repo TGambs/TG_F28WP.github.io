@@ -58,10 +58,7 @@ function UserData(){
     } else {
         uPos.innerHTML = "Geolocation is not supported by this browser.";
     }
-
-
 }
-
 
 // Following is for the cookie banner
 
@@ -110,6 +107,7 @@ window.onload = () => {
 
 
 
+// - - - - - AJAX - - - - -
 function extnlLd(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
@@ -120,3 +118,5 @@ function extnlLd(){
         xhttp.send();
     }
 }
+
+
