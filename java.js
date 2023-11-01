@@ -62,7 +62,7 @@ function UserData(){
 
 // Following is for the cookie banner
 
-//let popup = document.getElementById("cookiePopUp");
+let popup = document.getElementById("cookiePopUp");
 
 function cookieClicked(){
     let popup = document.getElementById("cookiePopUp");

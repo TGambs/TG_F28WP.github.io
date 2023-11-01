@@ -17,43 +17,27 @@
             <button class="navBar" onclick="location.href='4thPage.html'" type="button">4th Page</button>
         </div>
 
-        <div class="webGrab">
+        <div class="sessionVals">
+            
+            <body onload="displayWebStore()">
+            <form action=""> 
 
-            <script>
-                function extnlLd(){
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function(){
-                        console.log(this.readyState);
-                        console.log(this.status);
-                        if (this.readyState== 4 && this.status == 200){
-                            document.getElementById(impData).innerHTML = this.responseText;
-                        }
-                        xhttp.open("GET", "README.md", true);
-                        xhttp.send();
-                    }
-                }
-            </script>
-            <p id="impData" onload="extnlLd">None</p>
+                <p>
+                    Key <input id="key" value=""/>
+                    Value <input id="val" value=""/>
+                    <input type="button" value="Update" onclick="updateWebStore()">
+                </p> 
+                
+                <p>
+                    <input type="button" value="clear store" onclick="clearWebStore()">
+                    <input type="reset" value="reset form">
+                </p>
 
-           
+            </form>
+            <script type="text/javascript" src="storage.js"></script>
+            </body>
 
-
-            <!--
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-            <script>
-            $(document).ready(function(){
-                $("button").click(function(){
-                  $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
-                    if(statusTxt == "success")
-                      alert("External content loaded successfully!");
-                    if(statusTxt == "error")
-                      alert("Error: " + xhr.status + ": " + xhr.statusText);
-                  });
-                });
-              });
-
-            </script>
-            -->
+        </div>
 
             
         </div>
