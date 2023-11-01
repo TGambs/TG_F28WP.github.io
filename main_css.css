@@ -15,7 +15,7 @@ h2{
 }
 
 body{
-    background-color: rgb(121, 121, 121);
+    background-color: #3F4045;
 }
 
 button.navBar{
@@ -23,7 +23,7 @@ button.navBar{
     text-align: center;
     border: 10px;
     padding: 14px;
-    margin: 10px 20px 10px 10px;
+    margin: 10px 20px 20px 10px;
     font-size: 16px;
     color: black;
     background-color: rgb(153, 204, 255);
@@ -34,14 +34,14 @@ button.navBar{
 /* Divs */
 /* rgb(25, 25, 77) */
 div.navBar{
-    background-color: rgb(255, 255, 255);
+    background-color: #5D737E;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
 }
 
 div.main{
-    background-color:rgb(255, 255, 255);
+    background-color:#D9C5B2;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -49,7 +49,7 @@ div.main{
 }
 
 div.userInfo{
-    background-color:rgb(153, 204, 255);
+    background-color:#D9C5B2;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
@@ -58,13 +58,6 @@ div.userInfo{
     align-self: left;
     max-width: 40%;
     max-height: 40%;
-}
-
-div.webGrab{
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
 }
 
 /* IDs */
@@ -78,8 +71,20 @@ div.webGrab{
 button:hover, #colourButton:hover {
     transition: 0.2s ease-in;
     background-color: rgba(126, 126, 126, 0.784);
-  }
-
+}
+#liveTime{
+    padding: 10px;
+    margin: 0px;
+    background-color: rgb(150,150,150);
+    border: 10px;
+    border-radius: 10px;
+    text-align: center;
+    float: right;
+    font-size: 22px;
+    font-family: tahoma;
+    max-width: 12%;
+    display: inline;
+}
 #cookiesEnabled{
     font-family: Helvetica;
 }

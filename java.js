@@ -6,11 +6,21 @@ function changeColour(){
     document.getElementById("colourButton").style.backgroundColor = colours[ranNum];
 }
 
+function refreshTime() {
+    const timeDisplay = document.getElementById("liveTime");
+    const dateString = new Date().toLocaleString();
+    //console.log(dateString);
+    const formattedString = dateString.replace(", ", "\n");
+    document.getElementById("liveTime").innerHTML = formattedString;
+    //timeDisplay.textContent = formattedString;
+  }
+setInterval(refreshTime, 1000);
+
 function UserData(){
     
     // Asks the user to input a username on button click
-    let usersName = prompt("Please enter your name:");
-    document.getElementById("usersName").innerHTML = "Name: " + usersName;
+    //let usersName = prompt("Please enter your name:");
+    //document.getElementById("usersName").innerHTML = "Name: " + usersName;
 
     // Shows the exact time and date in UTC form
     let day = new Date();
