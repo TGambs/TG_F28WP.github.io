@@ -46,18 +46,32 @@ div.main{
     margin: 10px;
     text-align: center;
     border-radius: 10px;
+    height: auto;
 }
 
 div.userInfo{
-    background-color:#D9C5B2;
+    background-color:#3F4045;
+    color: white;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     font-size: 15px;
-    max-width: 40%;
-    align-self: left;
+    width: 40%;
     max-width: 40%;
     max-height: 40%;
+    height: 100%;
+    display: inline-block;
+}
+div.imgSlideShow{
+    padding: 20px;
+    margin: 10px;
+    border: 0px;
+    border-radius: 10px;
+    /*background-color: red;*/
+    max-width: 40%;
+    max-height: 40%;
+    height: 100%;
+    display: inline-block;
 }
 
 /* IDs */
@@ -120,6 +134,10 @@ button:hover, #colourButton:hover {
 #uPos {
     text-decoration: underline;
     color: blue;
+}
+
+#liveImg{
+    max-width: 75%;
 }
 /* Classes */
 .hide {
