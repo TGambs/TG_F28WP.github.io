@@ -117,16 +117,55 @@ window.onload = () => {
 
 
 
-// - - - - - AJAX - - - - -
-function extnlLd(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-        if (this.readyState== 4 && this.status == 200){
-            document.getElementById(impData).innerHTML = this.responseText;
+
+// - - - - - IMG slideshow - - - - -
+let imgCount = 0;
+
+function imgNext(imgCount){
+    console.log("YES");
+    if(imgCount==0){
+        imgCount=1;
+    } else if(imgCount==1){
+        imgCount=2;
+    } else{
+        imgCount=0
+    }
+    return imgCount;
+}
+function imgPre(imgCount){
+    console.log("YES2");
+    if(imgCount==0){
+        imgCount=2;
+    } else if(imgCount==1){
+        imgCount=0;
+    } else{
+        imgCount=1;
+    }
+    return imgCount;
+}
+function imgSS(imgCount) {
+    let pic = document.getElementById("liveImg");
+
+    while(true){
+
+        switch(imgCount){
+            case 0:
+                pic.src = "sunset1.png";
+                break;
+            case 1:
+                pic.src = "sunset2.png";
+                break;
+            case 2:
+                pic.src = "sunset3.png";
+                break;
         }
-        xhttp.open("GET", "README.md", true);
-        xhttp.send();
+        y=1;
     }
 }
+window.onload = () => {
+    setTimeout(() => {
+        imgSS();
+    }, 2000);
+};
 
 
