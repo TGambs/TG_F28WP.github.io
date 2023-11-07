@@ -120,52 +120,49 @@ window.onload = () => {
 
 // - - - - - IMG slideshow - - - - -
 let imgCount = 0;
-
 function imgNext(imgCount){
-    console.log("YES");
     if(imgCount==0){
-        imgCount=1;
+        imgCount+=1;
     } else if(imgCount==1){
-        imgCount=2;
-    } else{
+        imgCount+=1;
+    } else if(imgCount==2){
         imgCount=0
     }
+    imgSS(imgCount);
     return imgCount;
 }
 function imgPre(imgCount){
-    console.log("YES2");
     if(imgCount==0){
         imgCount=2;
     } else if(imgCount==1){
-        imgCount=0;
-    } else{
-        imgCount=1;
+        imgCount-=1;
+    } else if(imgCount==2){
+        imgCount-=1;
     }
+    imgSS(imgCount);
     return imgCount;
 }
 function imgSS(imgCount) {
     let pic = document.getElementById("liveImg");
-
-    while(true){
-
-        switch(imgCount){
-            case 0:
-                pic.src = "sunset1.png";
-                break;
-            case 1:
-                pic.src = "sunset2.png";
-                break;
-            case 2:
-                pic.src = "sunset3.png";
-                break;
-        }
-        y=1;
+    
+    switch(imgCount){
+        case 0:
+            pic.src = "sunset1.png";
+            break;
+        case 1:
+            pic.src = "sunset2.png";
+            break;
+        case 2:
+            pic.src = "sunset3.png";
+            break;
     }
+
 }
+/*
 window.onload = () => {
     setTimeout(() => {
         imgSS();
     }, 2000);
 };
-
+*/
 

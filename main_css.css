@@ -73,6 +73,16 @@ div.imgSlideShow{
     height: 100%;
     display: inline-block;
 }
+div.settingContainer{
+    background-color:#3F4045;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 15px;
+    width: 40%;
+    max-width: 40%;
+}
 
 /* IDs */
 #colourButton{
@@ -138,6 +148,7 @@ button:hover, #colourButton:hover {
 
 #liveImg{
     max-width: 75%;
+    height: 250px;
 }
 /* Classes */
 .hide {
