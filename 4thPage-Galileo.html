@@ -15,13 +15,16 @@
             <button class="navBar" onclick="location.href='2ndPage.html'" type="button">2nd Page</button>
             <button class="navBar" onclick="location.href='3rdPage.html'" type="button">3rd Page</button>
             <button class="navBar" onclick="location.href='4thPage.html'" type="button">Settings</button>
+
+            <p id="liveTime">Loading Time...</p>
         </div>
 
-        <div class="settingContainer">
-            <form>
+        <div class="main">
+            <div class="settingContainer">
+            
                 <label for="bgCol">Select Background Colour:</label><br>
                 <select id="bgCol" name="bgCol">
-                    <option value="default">Default</option>
+                    <option value="">Default</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                     <option value="orange">Orange</option>
@@ -31,12 +34,16 @@
 
                 <label for="txtFont">Select Text Font:</label><br>
                 <select id="txtFont" name="txtFont">
-                    <option value="default">Default</option>
-                    <option value="arial">Arial</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="verdana">Verdana</option>
+                    <option value="">Default</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Verdana">Verdana</option>
                 </select>
-            </form>
+                <br><br>
+
+                <!--<input type="submit" value="Apply Settings" id="settingSubmit" onclick="changeSettings(bgCol,txtFont)">-->
+            
+            </div>
         </div>
 
     </body>

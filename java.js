@@ -158,11 +158,20 @@ function imgSS(imgCount) {
     }
 
 }
-/*
-window.onload = () => {
-    setTimeout(() => {
-        imgSS();
-    }, 2000);
-};
-*/
 
+
+// - - - - - - - - - - Settings Page - - - - - - - - - -
+var bgc = document.getElementById("bgCol");
+var txtf = document.getElementById("txtFont");
+if(bgc){
+    // use if to check if there is an element with this id on the page
+    bgc.addEventListener('change', (event) => {
+        document.body.style.backgroundColor = event.target.value;
+    });
+}
+
+if(txtf){
+    txtf.addEventListener('change', (event) => {
+        document.body.style.fontFamily = event.target.value;
+    });
+}
